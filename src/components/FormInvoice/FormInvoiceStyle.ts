@@ -59,5 +59,25 @@ export const formInvoiceStyle: { [key: string]: CSSProperties } = {
 
   btnGenerate: {
     marginRight: 3,
+    backgroundColor: "blue",
+    color: "white",
+    height: 30,
+    borderRadius: 5,
+    border: "none",
+  },
+
+  btnGenerateDisable: {
+    marginRight: 3,
+    height: 30,
+    borderRadius: 5,
+    border: "none",
+  },
+
+  btnReset: {
+    backgroundColor: "red",
+    color: "white",
+    height: 30,
+    border: "none",
+    borderRadius: 5,
   },
 };

@@ -306,7 +306,11 @@ function FormInvoice() {
           <br />
           <div style={formInvoiceStyle.divBtn}>
             <button
-              style={formInvoiceStyle.btnGenerate}
+              style={
+                formState.total
+                  ? formInvoiceStyle.btnGenerate
+                  : formInvoiceStyle.btnGenerateDisable
+              }
               type="submit"
               disabled={
                 !isNaN(formState.total) && formState.total > 0 ? false : true
@@ -315,6 +319,7 @@ function FormInvoice() {
               Generate
             </button>
             <button
+              style={formInvoiceStyle.btnReset}
               type="reset"
               onClick={() => {
                 setHasBlur({
